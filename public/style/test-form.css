@@ -46,33 +46,30 @@ body{
     width: 100%;
 }
 
-.choise{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 20%;
-    font-size: 20px;
-    font-weight: 900;
-    text-align: center;
-}
-
 @media screen and (orientation:landscape) {
      }
 
 
 @media screen and (orientation:portrait) {
     .all-form-test{
-        background-image: url('../images/test/progres.jpg');
+        background-image: url('../images/test/progress.jpg');
     }
 }
 
-
 .choise {
+    color:rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 20%;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
     font-weight: bold;
     text-decoration: none;
-    text-shadow: rgba(17, 16, 16, 0.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
-    user-select: none;
+    text-shadow: -1px -1px 0 hsl(0, 0%, 0%),
+             -2px -2px 1px hsl(0, 0%, 0%);
     outline: none;
     border-radius: 3px / 100%;
     background-image:   

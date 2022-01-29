@@ -31,34 +31,33 @@ const questions = [
     varC:"гетры"},
 ]
 
+let progres = 100;
 let numberQuestion =0;
 let rezalt = 0;
     document.querySelectorAll('.choise').forEach((el)=> el.onclick = ()=>{
         console.log(numberQuestion)
         console.log(questions.length-1)
         if (el.innerHTML===questions[numberQuestion].true){
-            console.log('your right')
            rezalt++;
-        }else{
-            console.log('NOOO')
         }
-        if(numberQuestion<questions.length-1){
-            document.querySelector('#progressbar').style.opacity=`${progres-=20}%`;
+        if(numberQuestion<questions.length-1){            
             creactorQuestion(++numberQuestion)
         } else{
-            console.log(`you rezult is ${rezalt}`)
+            document.querySelector('.question-text').innerHTML=`Ты правильно ответил на ${rezalt} вопроса. Это ${rezalt/5}% верных ответов`;
         }
+        document.querySelector('#progressbar').style.opacity=`${progres-=20}%`;
     })
 
 const creactorQuestion = (i)=>{
+    let number = generateArrayRandomNumber (0, 3)
     document.querySelector('.question-text').innerHTML=questions[i].quest;
-    document.querySelector('#selectA').innerHTML=questions[i].true;
-    document.querySelector('#selectB').innerHTML=questions[i].varA;
-    document.querySelector('#selectC').innerHTML=questions[i].varB;
-    document.querySelector('#selectD').innerHTML=questions[i].varC;
+    document.querySelectorAll('.choise')[number[0]].innerHTML=questions[i].true;
+    document.querySelectorAll('.choise')[number[1]].innerHTML=questions[i].varA;
+    document.querySelectorAll('.choise')[number[2]].innerHTML=questions[i].varB;
+    document.querySelectorAll('.choise')[number[3]].innerHTML=questions[i].varC;
 }
 
-let progres = 100;
+
 
 console.log(document.querySelector('#selectA').style)
 
