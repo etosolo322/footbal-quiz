@@ -60,6 +60,7 @@ let rezalt = 0;
                     creactorQuestion(++numberQuestion)
                 },2200); 
             } else{
+                document.querySelector('.ansver-form').style.display='none'; 
                 document.querySelector('.question-text').innerHTML=`Ты правильно ответил на ${rezalt} вопроса. Это ${rezalt/5*100}% верных ответов`;
             }            
         },1500)
