@@ -63,7 +63,7 @@ let rezalt = 0;
                 document.querySelector('.ansver-form').style.display='none'; 
                 document.querySelector('.question-text').innerHTML=`Ты правильно ответил на ${rezalt} вопроса. Это ${rezalt/5*100}% верных ответов`;
             }            
-        },1500)
+        },1400)
     })
 
 const creactorQuestion = (i)=>{
