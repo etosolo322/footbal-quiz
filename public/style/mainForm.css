@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.all-form{
+    width: 100%;
+    height: 100%;    
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media screen and (orientation:portrait) {
+    .all-form{background-image: url('../images/background/mainFormPortrait.jpg');
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .all-form{background-image: url('../images/background/mainFormLand.jpg');
+    }   
+}
