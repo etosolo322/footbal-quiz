@@ -31,6 +31,9 @@ body{
     height: 50%;
     width: 100%;
 }
+.question-text{
+    padding: 15%;
+}
 .ansver-form{
     position: absolute;
     display: flex;
