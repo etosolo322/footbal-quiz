@@ -17,23 +17,29 @@ body{
 }
 
 .progressbar{
+    position: absolute;
     height: 100%;
-    background-color: red;
     z-index: 1;
+    opacity: 70%;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/test/texture.jpg');
 }
-.question-form, .answer-form{
-    position: relative;
-    z-index: 2;
-}
-
 .question-form{
+    position: relative;
+    z-index: 3;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url('../images/test/question.jpg');
     height: 50%;
 }
 .ansver-form{
+    position: relative;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     height: 50%;
 }
 @media screen and (orientation:landscape) {
@@ -41,6 +47,7 @@ body{
 
 
 @media screen and (orientation:portrait) {
-    .all-form-test{background-image: url('../images/test/progres.jpg');
+    .all-form-test{
+        background-image: url('../images/test/progres.jpg');
     }
 }
