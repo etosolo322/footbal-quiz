@@ -57,10 +57,6 @@ const creactorQuestion = (i)=>{
     document.querySelectorAll('.choise')[number[3]].innerHTML=questions[i].varC;
 }
 
-
-
-console.log(document.querySelector('#selectA').style)
-
 window.onload = ()=>{
     creactorQuestion(numberQuestion)
 }
