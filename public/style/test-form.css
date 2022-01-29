@@ -153,7 +153,7 @@ body{
 
 
 /*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*/
-a.button20 {
+a.buttonBack {
     position: fixed;
     top: 5px;
     left: 9px;
@@ -183,12 +183,12 @@ a.button20 {
      4px 16px 7px rgba(0,0,0,.3);
     transition: .4s;
   }
-  a.button20:active {
+  a.buttonBack:active {
     box-shadow: none;
     -webkit-transform: translate(-7px, 8px);
     transform: translate(-7px, 8px);
   }
-  a.button20:after {
+  a.buttonBack:after {
     content: "";
     position: absolute;
     top: calc(50% - .8em/2);

@@ -78,7 +78,7 @@ const creactorQuestion = (i)=>{
 
 window.onload = ()=>{
     creactorQuestion(numberQuestion)
-    document.querySelector('#buttonBack').onclick =() =>{      
-            window.open("../../index.html" ,'_self');        
+    document.querySelector('.buttonBack').onclick =() =>{    
+        setTimeout(()=>{window.open("../../index.html" ,'_self');  },200)      
     }
 }
