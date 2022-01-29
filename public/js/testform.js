@@ -29,8 +29,8 @@ const questions = [
     varA:"щитки",
     varB:"бутсы",
     varC:"гетры"},
+    
 ]
-
 let progres = 100;
 let numberQuestion =0;
 let rezalt = 0;
@@ -78,4 +78,7 @@ const creactorQuestion = (i)=>{
 
 window.onload = ()=>{
     creactorQuestion(numberQuestion)
+    document.querySelector('#buttonBack').onclick =() =>{      
+            window.open("../../index.html" ,'_self');        
+    }
 }
