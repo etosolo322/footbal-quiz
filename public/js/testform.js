@@ -34,18 +34,35 @@ const questions = [
 let progres = 100;
 let numberQuestion =0;
 let rezalt = 0;
-    document.querySelectorAll('.choise').forEach((el)=> el.onclick = ()=>{
-        console.log(numberQuestion)
-        console.log(questions.length-1)
-        if (el.innerHTML===questions[numberQuestion].true){
-           rezalt++;
-        }
-        if(numberQuestion<questions.length-1){            
-            creactorQuestion(++numberQuestion)
-        } else{
-            document.querySelector('.question-text').innerHTML=`Ты правильно ответил на ${rezalt} вопроса. Это ${rezalt/5}% верных ответов`;
-        }
-        document.querySelector('#progressbar').style.opacity=`${progres-=20}%`;
+
+    document.querySelectorAll('.choise').forEach((el,index,arr)=> el.onclick = ()=>{         
+        console.log(index)
+        el.style = 'background-color:yellow;';      
+       document.querySelector('.ansver-form').style.pointerEvents='none'
+        setTimeout(()=>{
+            if (el.innerHTML===questions[numberQuestion].true){               
+            rezalt++;
+            }
+            if(numberQuestion<questions.length-1){ 
+                document.querySelectorAll('.choise').forEach(elem=>{
+                    if (elem.innerHTML===questions[numberQuestion].true){
+                        elem.style = 'background-color:green;';
+                    }
+                    else{
+                        elem.style = 'background-color:red;';
+                    }
+                }) 
+                setTimeout(()=>{   
+                    document.querySelector('.ansver-form').style.pointerEvents='auto';     
+                    document.querySelectorAll('.choise').forEach(elem=>{
+                        elem.style = 'background-color:none';
+                })      
+                    creactorQuestion(++numberQuestion)
+                },2200); 
+            } else{
+                document.querySelector('.question-text').innerHTML=`Ты правильно ответил на ${rezalt} вопроса. Это ${rezalt/5*100}% верных ответов`;
+            }            
+        },1500)
     })
 
 const creactorQuestion = (i)=>{
@@ -56,6 +73,7 @@ const creactorQuestion = (i)=>{
     document.querySelectorAll('.choise')[number[2]].innerHTML=questions[i].varB;
     document.querySelectorAll('.choise')[number[3]].innerHTML=questions[i].varC;
 }
+
 
 window.onload = ()=>{
     creactorQuestion(numberQuestion)
