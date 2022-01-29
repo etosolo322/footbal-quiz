@@ -46,7 +46,24 @@ body{
 @media screen and (orientation:landscape) {
     .mainform-allform{background-image: url('../images/background/mainFormLand.jpg');
     }   
-   
+    .mainform-header{
+        height: 45%;
+    }
+    .mainform-footer{
+        height: 55%;   
+    }
+    .mainform-menu{
+        height: 100%;
+    }
+    .mainform-menu-buttonarea{
+        height: 80%;
+        margin:0 10%;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-around;
+        text-align: center;
+    }
 }
 
 
