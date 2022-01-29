@@ -37,7 +37,7 @@ let rezalt = 0;
 
     document.querySelectorAll('.choise').forEach((el,index,arr)=> el.onclick = ()=>{         
         console.log(index)
-        el.style = 'background-color:yellow;';      
+        el.style = 'background-color:gold;';      
        document.querySelector('.ansver-form').style.pointerEvents='none'
         setTimeout(()=>{
             if (el.innerHTML===questions[numberQuestion].true){               
@@ -75,8 +75,9 @@ const creactorQuestion = (i)=>{
     document.querySelectorAll('.choise')[number[3]].innerHTML=questions[i].varC;
 }
 
-
+screen.orientation.lock('landscape');
 window.onload = ()=>{
+    screen.orientation.lock('landscape');
     creactorQuestion(numberQuestion)
     document.querySelector('.buttonBack').onclick =() =>{    
         setTimeout(()=>{window.open("../../index.html" ,'_self');  },200)      
