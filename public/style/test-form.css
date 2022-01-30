@@ -68,10 +68,12 @@ body{
         font-size: 4vw;
     }
     .question-form{
+        padding-left: 10%;
+        padding-right: 10%;
         position: relative;
         z-index: 3;
         background: rgba(255, 255, 255, 0.8);
-        margin: 7%;
+       
         height: 35%;
         width: 86%;
         border: solid black;
@@ -116,7 +118,6 @@ body{
     }
     .question-form{
         margin-top: 10%;
-        margin-bottom: 5%;
         position: relative;
         z-index: 3;
         background-repeat: no-repeat;
@@ -132,7 +133,7 @@ body{
         justify-content: center;
         text-align: center;
         width: 70%;
-        height: 100%;
+        height: 90%;
         margin: 0 15%;
         font-size: 5vw;
         font-weight: 700;
@@ -151,7 +152,12 @@ body{
 }
 
 
-
+.back-and-progres{
+    display: flex;
+    position: fixed;
+    z-index: 6;
+    width: 100vw;
+}
 /*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*//*кнопка*/
 a.buttonBack {
     position: fixed;
@@ -205,3 +211,96 @@ a.buttonBack {
 
 
    /*прогресс бар*/   /*прогресс бар*/   /*прогресс бар*/   /*прогресс бар*/   /*прогресс бар*/   /*прогресс бар*/   /*прогресс бар*/   /*прогресс бар*/
+   .progress-bar {
+    position: fixed;
+    top:8%;
+    margin: 0 12%;
+    z-index: 6;
+    background-color: #2e2a2a;
+    height: 25px;
+    padding: 5px;
+    width: 78%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+    -webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.progress-bar span {
+    display: inline-block;
+    height: 100%;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    -webkit-transition: width .4s ease-in-out;
+    -moz-transition: width .4s ease-in-out;
+    -ms-transition: width .4s ease-in-out;
+    -o-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+}
+.blue span {
+    background-color: #34c2e3;
+}
+
+.orange span {
+    background-color: #fecf23;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fecf23), to(#fd9215));
+    background-image: -webkit-linear-gradient(top, #fecf23, #fd9215);
+    background-image: -moz-linear-gradient(top, #fecf23, #fd9215);
+    background-image: -ms-linear-gradient(top, #fecf23, #fd9215);
+    background-image: -o-linear-gradient(top, #fecf23, #fd9215);
+    background-image: linear-gradient(top, #fecf23, #fd9215);
+}      
+
+.green span {
+    background-color: #a5df41;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a5df41), to(#4ca916));
+    background-image: -webkit-linear-gradient(top, #a5df41, #4ca916);
+    background-image: -moz-linear-gradient(top, #a5df41, #4ca916);
+    background-image: -ms-linear-gradient(top, #a5df41, #4ca916);
+    background-image: -o-linear-gradient(top, #a5df41, #4ca916);
+    background-image: linear-gradient(top, #a5df41, #4ca916);
+}
+
+
+
+/*так просто */
+.area {
+ background-color: black;
+  text-align: center;
+  font-size: 6.5em;
+  color: #fff;
+  letter-spacing: -7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur 1.5s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}

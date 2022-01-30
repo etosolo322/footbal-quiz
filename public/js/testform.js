@@ -56,8 +56,9 @@ let rezalt = 0;
                     document.querySelector('.ansver-form').style.pointerEvents='auto';     
                     document.querySelectorAll('.choise').forEach(elem=>{
                         elem.style = 'background-color:none';
-                })      
+                    })      
                     creactorQuestion(++numberQuestion)
+                    document.querySelector('#progres-span').style.width=`${numberQuestion/(questions.length-1)*100}%`;
                 },2200); 
             } else{
                 document.querySelector('.ansver-form').style.display='none'; 
@@ -75,9 +76,16 @@ const creactorQuestion = (i)=>{
     document.querySelectorAll('.choise')[number[3]].innerHTML=questions[i].varC;
 }
 
-screen.orientation.lock('landscape');
 window.onload = ()=>{
-    screen.orientation.lock('landscape');
+    let i=20;
+    setInterval(() => {
+        if (i>10){
+            document.querySelector('.area').innerHTML=`00:${--i}`
+        } else{
+            document.querySelector('.area').innerHTML=`00:0${--i}`
+        }
+        
+    }, 1000);
     creactorQuestion(numberQuestion)
     document.querySelector('.buttonBack').onclick =() =>{    
         setTimeout(()=>{window.open("../../index.html" ,'_self');  },200)      
